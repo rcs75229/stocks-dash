@@ -12,11 +12,17 @@
             margin: 0; 
             padding: 5px; 
         }
+        .version-marker {
+            text-align: center;
+            font-size: 14px;
+            color: #ff4500;
+            padding: 10px;
+        }
         .grid-container { 
-            display: grid; 
-            /* This tells the grid to fill 222 the row with items at least 280px wide */
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            display: flex; 
+            flex-direction: column; 
             gap: 10px; 
+            width: 100%;
             max-width: 1400px; 
             margin: 0 auto; 
         }
@@ -26,29 +32,17 @@
             border-radius: 10px; 
             height: 160px; 
             overflow: hidden;
+            width: 100%; 
         }
         iframe { 
             width: 100%; 
             height: 100%; 
             border: none; 
         }
-
-        /* Responsive override for mobile devices */
-        @media (max-width: 600px) {
-            .grid-container {
-                /* Forces exactly one column on small screens */
-                grid-template-columns: 1fr; 
-                gap: 6px; 
-            }
-            .info-card {
-                /* Increased height for better readability on small screens */
-                height: 140px; 
-                border-radius: 6px;
-            }
-        }
     </style>
 </head>
 <body>
+    <div class="version-marker">VERSION 222</div>
     <div class="grid-container">
         <div class="info-card"><iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=CAPITALCOM%3AUS30&theme=dark&locale=en"></iframe></div>
         <div class="info-card"><iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=CAPITALCOM%3AUS500&theme=dark&locale=en"></iframe></div>
