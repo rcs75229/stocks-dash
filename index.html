@@ -6,54 +6,48 @@
     <title>Investment Tracker</title>
     <style>
         body { 
-            background-color: #000; 
-            color: #fff; 
-            font-family: sans-serif; 
+            background: #000; 
             margin: 0; 
-            padding: 5px; 
+            padding: 10px; 
+            font-family: sans-serif; 
         }
         .version-marker {
             text-align: center;
             font-size: 14px;
             color: #ff4500;
-            padding: 10px;
+            padding-bottom: 10px;
         }
-        .grid-container { 
+        .sidebar { 
+            width: 100%; 
+            max-width: 350px; 
             display: flex; 
             flex-direction: column; 
             gap: 15px; 
-            width: 100%;
-            max-width: 1400px; 
-            margin: 0 auto; 
-        }
-        .info-card { 
-            background: #000; 
-            border: 1px solid #222; 
-            border-radius: 10px; 
-            width: 95%;
-            height: 200px; /* Pushing to 200px for more room */
             margin: 0 auto;
-            overflow: hidden;
+        }
+        .card { 
+            background: #131722; 
+            border-radius: 12px; 
+            border: 1px solid #333; 
+            height: 230px; 
+            overflow: hidden; 
         }
         iframe { 
             width: 100%; 
             height: 100%; 
             border: none; 
-            display: block;
-            /* Force the internal widget to treat itself as if it has more horizontal room */
-            min-width: 400px; 
         }
     </style>
 </head>
 <body>
-    <div class="version-marker">VERSION 230</div>
-    <div class="grid-container">
-        <div class="info-card"><iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=CAPITALCOM%3AUS30&theme=dark&locale=en"></iframe></div>
-        <div class="info-card"><iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=CAPITALCOM%3AUS500&theme=dark&locale=en"></iframe></div>
-        <div class="info-card"><iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=TVC%3AGOLD&theme=dark&locale=en"></iframe></div>
-        <div class="info-card"><iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=BITSTAMP%3ABTCUSD&theme=dark&locale=en"></iframe></div>
-        <div class="info-card"><iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=NASDAQ%3ATSLA&theme=dark&locale=en"></iframe></div>
-        <div class="info-card"><iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=NASDAQ%3ASPCX&theme=dark&locale=en"></iframe></div>
+    <div class="version-marker">VERSION 231</div>
+    <div class="sidebar">
+        <div class="card"><iframe src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=CAPITALCOM:US30&theme=dark"></iframe></div>
+        <div class="card"><iframe src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=CAPITALCOM:US500&theme=dark"></iframe></div>
+        <div class="card"><iframe src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=TVC:GOLD&theme=dark"></iframe></div>
+        <div class="card"><iframe src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=BITSTAMP:BTCUSD&theme=dark"></iframe></div>
+        <div class="card"><iframe src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=NASDAQ:TSLA&theme=dark"></iframe></div>
+        <div class="card"><iframe src="https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=NASDAQ:SPCX&theme=dark"></iframe></div>
     </div>
 </body>
 </html>
