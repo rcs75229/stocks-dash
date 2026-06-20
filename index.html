@@ -30,9 +30,11 @@
             background: #000; 
             border: 1px solid #222; 
             border-radius: 10px; 
-            width: 100%;
-            /* Increased by 20px to 140px to stop text truncation */
-            height: 140px; 
+            /* Width set to 50% as requested */
+            width: 50%;
+            /* Height increased to 160px to provide more vertical space */
+            height: 160px; 
+            margin: 0 auto; /* Keeps the 50% width centered */
         }
         iframe { 
             width: 100%; 
@@ -43,7 +45,7 @@
     </style>
 </head>
 <body>
-    <div class="version-marker">VERSION 225</div>
+    <div class="version-marker">VERSION 226</div>
     <div class="grid-container">
         <div class="info-card"><iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=CAPITALCOM%3AUS30&theme=dark&locale=en"></iframe></div>
         <div class="info-card"><iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=CAPITALCOM%3AUS500&theme=dark&locale=en"></iframe></div>
