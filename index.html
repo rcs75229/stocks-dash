@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Investment Tracker</title>
     <style>
         body { 
@@ -30,9 +30,8 @@
             background: #000; 
             border: 1px solid #222; 
             border-radius: 10px; 
-            /* Resetting to a wider, usable width */
             width: 95%;
-            height: 180px; 
+            height: 200px; /* Pushing to 200px for more room */
             margin: 0 auto;
             overflow: hidden;
         }
@@ -41,11 +40,13 @@
             height: 100%; 
             border: none; 
             display: block;
+            /* Force the internal widget to treat itself as if it has more horizontal room */
+            min-width: 400px; 
         }
     </style>
 </head>
 <body>
-    <div class="version-marker">VERSION 229</div>
+    <div class="version-marker">VERSION 230</div>
     <div class="grid-container">
         <div class="info-card"><iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=CAPITALCOM%3AUS30&theme=dark&locale=en"></iframe></div>
         <div class="info-card"><iframe src="https://s.tradingview.com/embed-widget/single-quote/?symbol=CAPITALCOM%3AUS500&theme=dark&locale=en"></iframe></div>
